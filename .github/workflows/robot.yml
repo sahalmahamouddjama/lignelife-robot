@@ -14,5 +14,5 @@ jobs:
         with:
           python-version: '3.10'
       - run: pip install requests
-      - name: Lancer le fichier directement
-        run: python ./lignelife-robot/automatisation.py
+      - name: Lancer le fichier à la racine
+        run: python automatisation.py
