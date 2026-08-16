@@ -14,11 +14,7 @@ jobs:
         with:
           python-version: '3.10'
       - run: pip install requests
-      - name: Lancer le robot peu importe sa position
+      - name: Execution automatique du script
         run: |
-          FILE_PATH=$(find . -name "automatisation.py" -print -quit)
-          if [ -z "$FILE_PATH" ]; then
-            echo "❌ Erreur : Le fichier complet est introuvable sur votre compte !"
-            exit 1
-          fi
-          python "$FILE_PATH"
+          CHEMIN_FICHIER=$(find . -name "automatisation.py" -print -quit)
+          python "$CHEMIN_FICHIER"
