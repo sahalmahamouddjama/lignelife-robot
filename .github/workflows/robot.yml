@@ -14,4 +14,11 @@ jobs:
         with:
           python-version: '3.10'
       - run: pip install requests
-      - run: python lignelife-robot/automatisation.py
+      - name: Lancer le robot peu importe sa position
+        run: |
+          FILE_PATH=$(find . -name "automatisation.py" -print -quit)
+          if [ -z "$FILE_PATH" ]; then
+            echo "❌ Erreur : Le fichier complet est introuvable sur votre compte !"
+            exit 1
+          fi
+          python "$FILE_PATH"
