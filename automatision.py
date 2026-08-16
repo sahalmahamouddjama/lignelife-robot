@@ -2,14 +2,14 @@ import os
 import requests
 import json
 
-# 🔑 CONFIGURATION DE VOS CLÉS GRATUITES (Prêtes pour le serveur en ligne)
+# 🔑 CONFIGURATION DE VOS CLÉS GRATUITES
 GEMINI_API_KEY = "AQ.Ab8RN6LRDmWGdgL03NJJ45IjAv1KFHveEhfDTkYZHRW9y4OKNw"
 
 JSONBIN_BIN_ID = "6a81a6edf5f4af5e291cba3f"
 JSONBIN_API_KEY = "\$2a\$10\$ijBomvNp6abRYHZtUnNzvOig5ScKeTjcrPOIKKpJSDqMNMwIOGnYq"
 
 def appeler_gemini_gratuit(prompt_text):
-    # Adresse officielle et complète de Google Gemini
+    # L'adresse officielle corrigée de Google Gemini
     url = f"https://googleapis.com{GEMINI_API_KEY}"
     headers = {"Content-Type": "application/json"}
     payload = {
@@ -77,7 +77,7 @@ def machine_a_contenu_automatique():
             })
 
     print("\n🌐 ÉTAPE 3 : Publication automatique sur votre site...")
-    # Adresse officielle et complète de JSONBin
+    # L'adresse officielle corrigée de JSONBin
     url_cloud = f"https://jsonbin.io{JSONBIN_BIN_ID}"
     headers = {"X-Master-Key": JSONBIN_API_KEY}
     
